@@ -3,7 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  clientId: 'webfg-test',
+  clientPassword:'WW58YJj89ltR43Cr',
+  userName: 'test001',
+  password: 'ryby3NTyKduAMcvZ',
+  grantType: 'password',
+  scope: 'uaa.user',
+  basic: 'Basic d2ViZmctdGVzdDpXVzU4WUpqODlsdFI0M0Ny'
 };
 
 /*
