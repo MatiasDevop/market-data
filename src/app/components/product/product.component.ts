@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/models/product.model';
 import { ProductService } from 'src/app/services/product.service';
 import { SignalrService } from 'src/app/services/signalr.service';
 
@@ -12,6 +13,8 @@ export class ProductComponent implements OnInit {
     displayedColumns: string[] = ['productId',
     'name', 'description',
     'stock', 'price', 'subscribe'];
+
+    public products: Product[] = [];
 
     constructor(public productService: ProductService,
         private singleService: SignalrService) {
@@ -27,7 +30,10 @@ export class ProductComponent implements OnInit {
     }
 
     getProducts(){
-      this.productService.get();
+      this.productService.get().subscribe(res =>{
+        console.log(res);
+        this.products = res;
+      });
     }
 
     subscribeToProduct(productId:string){

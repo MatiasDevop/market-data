@@ -17,7 +17,7 @@ export class SignalrService {
   public startConnection = () =>{
     this.hubConnection =
     new signalR.HubConnectionBuilder()
-          .withUrl('https://localhost:7132/Notify', { skipNegotiation: true,
+          .withUrl('https://localhost:7236/Notify', { skipNegotiation: true,
           transport: signalR.HttpTransportType.WebSockets })
           .build();
     this.hubConnection
