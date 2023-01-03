@@ -4,4 +4,8 @@ export class Product {
   public description!: string;
   public price!: number;
   public stock!: number;
+
+  public name!: string;
+  public code!: string;
+
 }

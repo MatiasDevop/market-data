@@ -29,6 +29,7 @@ export class SignalrService {
 
   public addProductListener = () => {
     this.hubConnection.on('SendMessage', (notification: Notification) => {
+      console.log('send  message........')
       this.showNotification(notification);
       this.productService.get();
     })
