@@ -34,7 +34,7 @@ export class ProductComponent implements OnInit {
     getProducts(){
       this.productService.get().subscribe(res =>{
         console.log(res);
-        this.toastr.success("I'm a toast!", "Success!");
+        this.toastr.success("Getting products", "success");
         this.products = res;
       });
     }

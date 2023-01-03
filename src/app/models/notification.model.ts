@@ -1,5 +1,5 @@
 export class Notification {
-  public productID!: string;
+  public productId!: string;
   public productName!: string;
   public message!: string;
 }

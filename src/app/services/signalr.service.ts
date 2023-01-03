@@ -24,19 +24,18 @@ export class SignalrService {
         .start()
         .then(() => console.log('Connection started'))
         .catch(err => console.log('Error while start connection:' + err))
-
   }
 
   public addProductListener = () => {
-    this.hubConnection.on('SendMessage', (notification: Notification) => {
-      console.log('send  message........')
+    this.hubConnection.on('ReceiveMessage', (notification: Notification) => {
+      console.log('send message........', notification)
       this.showNotification(notification);
       this.productService.get();
     })
   }
 
   showNotification(notification: Notification){
-    this.toastr.warning(notification.message, notification.productID + " " +notification.productName);
+    this.toastr.warning(notification.message, notification.productId + " " +notification.productName);
   }
 
   public subscribeToProduct(productID:string){
