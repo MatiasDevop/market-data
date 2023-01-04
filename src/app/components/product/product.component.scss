@@ -1,4 +1,9 @@
 .product-component{
+
+  .demo-table {
+    width: 100%;
+  }
+
   .header {
     padding: 60px;
     text-align: center;
@@ -34,5 +39,4 @@
     font-size: 20px;
   }
 
-  .toastr { pointer-events: none; }
 }
