@@ -1,42 +1,9 @@
-<h2>Market Data</h2>
-<div class="market">
-  <table style="width:100%">
-    <tr>
-      <th>{{last}}</th>
-      <td>{{fields?.LVAL_NORM?.v}}</td>
-      <td>{{fields?.LVAL_NORM?.d}}</td>
-    </tr>
-    <tr>
-      <th>{{close}}</th>
-      <td>{{fields?.CLOSE_ADJ_NORM?.v}}</td>
-      <td>{{fields?.CLOSE_ADJ_NORM?.d}}</td>
-    </tr>
-    <tr>
-      <th>{{dayChange1}}</th>
-      <td>{{fields?.NC2_PR_NORM?.v}}</td>
-    </tr>
-    <tr>
-      <th>{{dayChange2}}</th>
-      <td>{{fields?.NC2_NORM?.v}}</td>
-    </tr>
-    <tr>
-      <th>{{volume}}</th>
-      <td>{{fields?.VOL?.v}}</td>
-    </tr>
-    <tr>
-      <th>{{turnOver}}</th>
-      <td>{{fields?.TUR?.v}}</td>
-    </tr>
-    <tr>
-      <th>{{previusYearClose}}</th>
-      <td>{{fields?.PY_CLOSE?.v}}</td>
-      <td>{{fields?.PY_CLOSE?.d}}</td>
-    </tr>
-    <tr>
-      <th>{{ytd}}</th>
-      <td>{{fields?.YTD_PR_NORM?.v}}</td>
-    </tr>
-  </table>
-</div>
+<h1>Monsterlessons academy</h1>
 
+<div>
+  <a routerLink="/product">product</a>
+</div>
+<div>
+  <a routerLink="/market">Market</a>
+</div>
 <router-outlet></router-outlet>
